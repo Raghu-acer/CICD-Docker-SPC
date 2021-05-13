@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Docker build") {
           steps{
-              sh "sudo docker image buid . -t raghudusa/spring-petclininc:13052021"
+              sh "sudo docker image build . -t raghudusa/spring-petclininc:13052021"
           }
         }
         stage("Docker push") {
