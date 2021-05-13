@@ -1,5 +1,8 @@
 pipeline {
     agent any
+      environment {
+      DOCKER_TAG = getVersion()
+    }
     stages {
        stage("scm") {
           steps{
@@ -13,7 +16,7 @@ pipeline {
         }
         stage("Docker build") {
           steps{
-              sh "sudo docker image build . -t raghudusa/spring-petclininc:13052021"
+              sh "sudo docker image build . -t raghudusa/spring-petclininc:${DOCKER_TAG}"
           }
         }
         stage("Docker push") {
@@ -21,12 +24,12 @@ pipeline {
               withCredentials([string(credentialsId: 'raghudusa', variable: 'dockerhub')]) {
                 sh "sudo docker login -u raghudusa -p ${dockerhub}"
              }
-                sh "sudo docker push raghudusa/spring-petclininc:13052021"
+                sh "sudo docker push raghudusa/spring-petclininc:${DOCKER_TAG}"
           }
         }
         stage("deploy from ansible") {
           steps{
-              ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'host', playbook: 'Ansible.yml' 
+              ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, extras: 'DOCKER_TAG=""', installation: 'Ansible', inventory: 'host', playbook: 'Ansible.yml'
           }
         }
     }
