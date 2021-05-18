@@ -43,7 +43,7 @@
     - name: Start the container
       docker_container:
         name: spring-petclinic
-        image: "raghudusa/spring-petclininc:v1"
+        image: "raghudusa/spring-petclininc:18052021"
         state: started
         published_ports:
            - 0.0.0.0:1462:8080
