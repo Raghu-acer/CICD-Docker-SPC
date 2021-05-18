@@ -27,6 +27,18 @@
         name: raghudusa/spring-petclininc:18052021
         tag: v1
         source: build
+    - name: Log into DockerHub
+      docker_login:
+        username: raghudusa
+        password: RAGHU@123
+        email: raghudusa22@gmail.com
+
+    - name: Tag and push to docker hub
+      docker_image:
+        name: raghudusa/spring-petclininc:18052021
+        repository: raghudusa/spring-petclininc
+        tag: v1
+        push: yes
     
     - name: Start the container
       docker_container:
@@ -34,5 +46,5 @@
         image: "raghudusa/spring-petclininc:18052021"
         state: started
         published_ports:
-           - 0.0.0.0:1458:8080
+           - 0.0.0.0:1462:8080
     
