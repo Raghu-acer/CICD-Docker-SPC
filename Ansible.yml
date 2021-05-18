@@ -20,9 +20,8 @@
         name: docker-py
         state: present
     - name: image build
-      community.docker.docker_image:
         build:
-          path: .
+          path: Dockerfile
         name: raghudusa/spring-petclininc:18052021
         push: yes
         source: build
