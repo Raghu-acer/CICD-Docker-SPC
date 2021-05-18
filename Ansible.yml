@@ -22,7 +22,7 @@
     - name: image build
       community.docker.docker_image:
         build:
-          path: ./Dockerfile
+          path: .
         name: raghudusa/spring-petclininc:18052021
         push: yes
         source: build
