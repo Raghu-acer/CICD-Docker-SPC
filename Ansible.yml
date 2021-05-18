@@ -24,7 +24,7 @@
       docker_image:
         build:
           path: Dockerfile
-        name: raghudusa/spring-petclininc
+        name: raghudusa/spring-petclininc:18052021
         tag: v1
         source: build
     - name: Log into DockerHub
@@ -35,9 +35,9 @@
 
     - name: Tag and push to docker hub
       docker_image:
-        name: raghudusa/spring-petclininc
+        name: raghudusa/spring-petclininc:18052021
         repository: raghudusa/spring-petclininc
-        tag: v1
+        tag: 18052021
         push: yes
     
     - name: Start the container
