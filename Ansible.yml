@@ -19,6 +19,14 @@
       pip:
         name: docker-py
         state: present
+    - name: image build
+      community.docker.docker_image:
+        build:
+          path: Dockerfile
+        name: raghudusa/spring-petclininc:18052021
+        push: yes
+        source: build
+    
     - name: Start the container
       docker_container:
         name: spring-petclinic
