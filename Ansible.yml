@@ -34,7 +34,10 @@
         email: raghudusa22@gmail.com
 
     - name: Tag and push to docker hub
-      command: "sudo docker push gameoflife:19052021
+      docker_image:
+        name: raghudusa/spring-petclininc:18052021
+        repository: raghudusa/spring-petclininc
+        push:yes
     
     - name: Start the container
       docker_container:
