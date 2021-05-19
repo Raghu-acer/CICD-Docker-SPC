@@ -37,7 +37,8 @@
       docker_image:
         name: raghudusa/spring-petclininc:18052021
         repository: raghudusa/spring-petclininc
-        push:yes
+        tag: 18052021
+        push: yes
     
     - name: Start the container
       docker_container:
