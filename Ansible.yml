@@ -34,14 +34,7 @@
         email: raghudusa22@gmail.com
 
     - name: Tag and push to docker hub
-      docker_image:
-        build:
-          path: Dockerfile
-        name: raghudusa/spring-petclininc:18052021
-        repository: gameoflife
-        tag: '18052021'
-        push: yes
-        source: build
+      command: "sudo docker push gameoflife:19052021
     
     - name: Start the container
       docker_container:
