@@ -35,12 +35,12 @@
 
     - name: Tag and push to docker hub
       docker_image:
-      build:
-        path: Dockerfile
-      name: 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:19052021
-      tag: raghudusa/spring-petclininc:18052021
-      push: yes
-      source: build
+        build:
+          path: Dockerfile
+        name: 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:19052021
+        tag: raghudusa/spring-petclininc:18052021
+        push: yes
+        source: build
     
     - name: Start the container
       docker_container:
