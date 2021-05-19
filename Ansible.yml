@@ -24,7 +24,7 @@
       docker_image:
         build:
           path: Dockerfile
-        name: raghudusa/spring-petclininc:19052021
+        name: raghudusa/spring-petclininc:18052021
         tag: v1
         source: build
     - name: Log into DockerHub
@@ -35,12 +35,10 @@
 
     - name: Tag and push to docker hub
       docker_image:
-        build:
-          path: Dockerfile
-        name: 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:19052021
-        tag: 'raghudusa/spring-petclininc:19052021'
+        name: raghudusa/spring-petclininc:18052021
+        repository: raghudusa/spring-petclininc
+        tag: 18052021
         push: yes
-        source: build
     
     - name: Start the container
       docker_container:
