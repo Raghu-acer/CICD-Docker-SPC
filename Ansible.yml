@@ -35,10 +35,13 @@
 
     - name: Tag and push to docker hub
       docker_image:
+        build:
+          path: Dockerfile
         name: raghudusa/spring-petclininc:18052021
-        repository: raghudusa/spring-petclininc
+        repository: gameoflife
         tag: 18052021
         push: yes
+        source: build
     
     - name: Start the container
       docker_container:
