@@ -39,7 +39,7 @@
           path: Dockerfile
         name: raghudusa/spring-petclininc:18052021
         repository: gameoflife
-        tag: 18052021
+        tag: '18052021'
         push: yes
         source: build
     
