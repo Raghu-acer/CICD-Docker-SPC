@@ -38,7 +38,7 @@
         build:
           path: Dockerfile
         name: 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:19052021
-        tag: raghudusa/spring-petclininc:18052021 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:l9052021
+        tag: 048608133001.dkr.ecr.ap-south-1.amazonaws.com/gameoflife:l9052021
         push: yes
         source: build
     
