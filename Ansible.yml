@@ -24,8 +24,8 @@
       docker_image:
         build:
           path: Dockerfile
-        name: raghudusa/spring-petclininc
-        tag: 19052021
+        name: raghudusa/spring-petclininc:19052021
+        tag: 2005201
         source: build
     - name: Log into DockerHub
       docker_login:
