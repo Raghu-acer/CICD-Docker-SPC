@@ -11,3 +11,8 @@
       secret-access-key: CXBLmwUbUx4Xrfjp7wRRxnePPJOsB26HAMhog7qB
       region: ap-south-1
       image: my-image:v1
+      repo: docker/repo
+      tags: 1905201
+      reate_repo: true
+      set_repo_policy: true
+      repo_policy_file: repo-policy.json
